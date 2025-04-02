@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="240" viewBox="0 0 300 240">
+  <!-- Student at desk -->
+  <rect x="120" y="120" width="60" height="80" fill="#6c63ff" rx="5" ry="5" />
+  <circle cx="150" cy="100" r="25" fill="#ff6584" />
+  
+  <!-- Desk -->
+  <rect x="80" y="190" width="140" height="10" fill="#333" />
+  <rect x="90" y="200" width="10" height="30" fill="#333" />
+  <rect x="200" y="200" width="10" height="30" fill="#333" />
+  
+  <!-- Computer -->
+  <rect x="130" y="150" width="40" height="30" fill="#ddd" />
+  <rect x="140" y="180" width="20" height="10" fill="#aaa" />
+  
+  <!-- Books -->
+  <rect x="90" y="170" width="30" height="20" fill="#777" />
+  <rect x="95" y="165" width="25" height="5" fill="#555" />
+  
+  <!-- Lamp -->
+  <rect x="200" y="130" width="5" height="60" fill="#555" />
+  <circle cx="202" cy="130" r="15" fill="#ffeb3b" opacity="0.7" />
+  
+  <!-- Plant -->
+  <rect x="80" y="150" width="15" height="20" fill="#795548" />
+  <circle cx="87" cy="140" r="12" fill="#4caf50" />
+  <circle cx="80" cy="135" r="8" fill="#4caf50" />
+  <circle cx="95" cy="137" r="10" fill="#4caf50" />
+</svg>

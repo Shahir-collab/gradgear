@@ -1,0 +1,210 @@
+/* AvatarSystem.css */
+.avatar-system {
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .avatar-system.bottom-right {
+    right: 2rem;
+    bottom: 2rem;
+  }
+  
+  .avatar-system.bottom-left {
+    left: 2rem;
+    bottom: 2rem;
+  }
+  
+  .avatar-character {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .avatar-character::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 10px;
+    background: radial-gradient(ellipse at center, rgba(0,168,107,0.3) 0%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+  }
+  
+  .avatar-image {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    transform-origin: bottom center;
+  }
+  
+  .avatar-character.neutral .avatar-image {
+    animation: gentle-float 3s ease-in-out infinite;
+  }
+  
+  .avatar-character.happy .avatar-image {
+    animation: happy-bounce 2s ease-in-out infinite;
+  }
+  
+  .avatar-character.thinking .avatar-image {
+    animation: thinking-tilt 4s ease-in-out infinite;
+  }
+  
+  .avatar-character.explaining .avatar-image {
+    animation: explaining-gesture 3s ease-in-out infinite;
+  }
+  
+  .avatar-character.celebrating .avatar-image {
+    animation: celebrating-spin 1s ease-in-out;
+  }
+  
+  .avatar-message {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    max-width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border: 1px solid rgba(0, 168, 107, 0.3);
+  }
+  
+  .avatar-message::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #1e1e1e;
+  }
+  
+  .message-content {
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+  
+  .action-buttons button {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .action-buttons button.primary {
+    background-color: #00a86b;
+    color: white;
+    border: none;
+  }
+  
+  .action-buttons button.primary:hover {
+    background-color: #00c17f;
+    transform: translateY(-2px);
+  }
+  
+  .action-buttons button.secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .action-buttons button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .close-button:hover {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Animations */
+  @keyframes gentle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
+  @keyframes happy-bounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    30% { transform: translateY(-8px) scale(1.05); }
+    60% { transform: translateY(0) scale(1); }
+  }
+  
+  @keyframes thinking-tilt {
+    0%, 100% { transform: rotate(0deg); }
+    30% { transform: rotate(5deg); }
+    70% { transform: rotate(-5deg); }
+  }
+  
+  @keyframes explaining-gesture {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-3px) rotate(3deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(-3px) rotate(-3deg); }
+  }
+  
+  @keyframes celebrating-spin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .avatar-system.bottom-right,
+    .avatar-system.bottom-left {
+      right: 1rem;
+      bottom: 1rem;
+    }
+    
+    .avatar-character {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .avatar-message {
+      max-width: 280px;
+      font-size: 0.9rem;
+    }
+  }

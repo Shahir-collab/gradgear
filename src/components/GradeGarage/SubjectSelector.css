@@ -1,0 +1,64 @@
+/* src/components/GradeGarage/SubjectSelector.css */
+.subject-selector {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .subject-selector h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .subjects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .subject-item {
+    background-color: #2d2d2d;
+    border-radius: 6px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .subject-item:hover {
+    background-color: #363636;
+  }
+  
+  .subject-item.selected {
+    background-color: #00b07c;
+  }
+  
+  .subject-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+  
+  .subject-code {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+  }
+  
+  .subject-semester {
+    font-size: 0.8rem;
+    color: #a0a0a0;
+    margin-top: 0.3rem;
+  }
+  
+  .subject-item.selected .subject-code,
+  .subject-item.selected .subject-semester {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .no-subjects {
+    color: #a0a0a0;
+    text-align: center;
+    padding: 1rem;
+  }

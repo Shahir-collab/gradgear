@@ -1,0 +1,165 @@
+/* src/components/GradeGarage/MarksList.css */
+.marks-list {
+    width: 100%;
+  }
+  
+  .marks-list h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  .marks-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .mark-card {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  .mark-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .mark-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mark-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 70%;
+  }
+  
+  .grade-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  .grade-a {
+    background-color: #00b07c;
+    color: #fff;
+  }
+  
+  .grade-b {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .grade-c {
+    background-color: #f39c12;
+    color: #fff;
+  }
+  
+  .grade-d {
+    background-color: #e67e22;
+    color: #fff;
+  }
+  
+  .grade-f {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .mark-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mark-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+  }
+  
+  .mark-label {
+    color: #a0a0a0;
+  }
+  
+  .mark-value {
+    color: #fff;
+    font-weight: 500;
+  }
+  
+  .mark-item.total {
+    margin-top: 0.5rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid #444;
+  }
+  
+  .mark-item.total .mark-label,
+  .mark-item.total .mark-value {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  
+  .mark-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .edit-btn {
+    background-color: transparent;
+    border: 1px solid #3498db;
+    color: #3498db;
+  }
+  
+  .edit-btn:hover {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .delete-btn {
+    background-color: transparent;
+    border: 1px solid #e74c3c;
+    color: #e74c3c;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .no-marks {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    color: #a0a0a0;
+  }
+  
+  .no-marks p:first-child {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .marks-cards {
+      grid-template-columns: 1fr;
+    }
+  }

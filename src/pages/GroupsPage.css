@@ -1,0 +1,209 @@
+/* GroupsPage.css */
+.groups-page {
+    padding: 2rem;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+  }
+  
+  .search-container {
+    margin-bottom: 2.5rem;
+  }
+  
+  .search-bar {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    border-color: #00a86b;
+    box-shadow: 0 0 0 2px rgba(0, 168, 107, 0.2);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem;
+  }
+  
+  .groups-section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #00a86b;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .groups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .group-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .group-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .group-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    background-color: #121212;
+    border: 2px solid #00a86b;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .group-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    padding: 0.5rem;
+  }
+  
+  .group-description {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .group-description p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  
+  .social-link:hover {
+    transform: scale(1.1);
+  }
+  
+  .social-link.whatsapp {
+    background-color: rgba(37, 211, 102, 0.2);
+    color: #25d366;
+  }
+  
+  .social-link.whatsapp:hover {
+    background-color: rgba(37, 211, 102, 0.3);
+  }
+  
+  .social-link.instagram {
+    background-color: rgba(225, 48, 108, 0.2);
+    color: #e1306c;
+  }
+  
+  .social-link.instagram:hover {
+    background-color: rgba(225, 48, 108, 0.3);
+  }
+  
+  .social-link.linkedin {
+    background-color: rgba(0, 119, 181, 0.2);
+    color: #0077b5;
+  }
+  
+  .social-link.linkedin:hover {
+    background-color: rgba(0, 119, 181, 0.3);
+  }
+  
+  .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .groups-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .group-circle {
+      width: 100px;
+      height: 100px;
+    }
+    
+    .group-name {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .groups-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .search-bar input {
+      padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    }
+    
+    .search-icon {
+      left: 1rem;
+    }
+  }

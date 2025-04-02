@@ -1,0 +1,104 @@
+/* File: /src/components/PerformanceAnalyzer/RecommendationPanel.css */
+
+.recommendation-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .strengths-section,
+  .improvement-section {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .strengths-section h3,
+  .improvement-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+  }
+  
+  .strengths-section h3 {
+    color: #4CAF50;
+  }
+  
+  .strength-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .strength-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .strength-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .strength-name {
+    font-weight: 500;
+    color: #e0e0e0;
+  }
+  
+  .strength-score {
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .strength-description {
+    color: #aaa;
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+  }
+  
+  .recommendation-card {
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid #4CAF50;
+  }
+  
+  .recommendation-card h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+  }
+  
+  .recommendation-card p {
+    color: #aaa;
+    margin: 0 0 15px 0;
+  }
+  
+  .recommendation-resources {
+    margin-top: 10px;
+  }
+  
+  .recommendation-resources strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+  }
+  
+  .recommendation-resources ul {
+    margin: 5px 0 0 0;
+    padding-left: 20px;
+  }
+  
+  .recommendation-resources a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .recommendation-resources a:hover {
+    text-decoration: underline;
+  }

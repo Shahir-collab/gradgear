@@ -1,0 +1,75 @@
+/* File: src/components/PerformanceAnalyzer/GPAPredictionChart.css */
+
+.gpa-prediction-container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .chart-header h3 {
+    margin: 0;
+    color: #4CAF50;
+    font-size: 1.3rem;
+  }
+  
+  .confidence-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .confidence-label {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+  }
+  
+  .confidence-meter {
+    width: 100px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .confidence-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+  
+  .confidence-value {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .chart-container {
+    height: 350px;
+    position: relative;
+  }
+  
+  .prediction-explanation {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border-left: 3px solid #4CAF50;
+  }
+  
+  .prediction-explanation p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 8px 0;
+  }
+  
+  .prediction-explanation strong {
+    color: #e0e0e0;
+  }

@@ -1,0 +1,64 @@
+/* src/components/performance/PerformanceAnalyzer.css */
+.performance-analyzer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: white;
+  }
+  
+  .analyzer-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .analyzer-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .analyzer-description {
+    font-size: 1.1rem;
+    color: #aaa;
+  }
+  
+  .analyzer-content {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .recommendations-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .recommendations-section {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    font-size: 1.2rem;
+    color: #4CAF50;
+  }
+  
+  .error-message {
+    background-color: rgba(255, 82, 82, 0.1);
+    color: #FF5252;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .no-data-message {
+    text-align: center;
+    padding: 3rem 0;
+    color: #aaa;
+  }

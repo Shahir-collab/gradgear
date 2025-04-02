@@ -1,0 +1,47 @@
+.documents-section {
+    padding: 2rem 3rem;
+    background-color: #222;
+    color: white;
+  }
+  
+  .documents-title {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    margin-left: 0.5rem;
+  }
+  
+  .document-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .document-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: opacity 0.3s ease;
+  }
+  
+  .document-link:hover {
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .documents-section {
+      padding: 1.5rem;
+    }
+    
+    .document-links {
+      flex-direction: column;
+    }
+  }

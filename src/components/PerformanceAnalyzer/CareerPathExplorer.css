@@ -1,0 +1,72 @@
+/* File: /src/components/PerformanceAnalyzer/CareerPathExplorer.css */
+
+.career-path-explorer {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .career-paths-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .career-card {
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    padding: 20px;
+  }
+  
+  .career-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .career-header h3 {
+    margin: 0;
+    color: #e0e0e0;
+  }
+  
+  .match-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .match-percentage {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+  
+  .match-label {
+    font-size: 0.8rem;
+    color: #888;
+  }
+  
+  .masters-recommendations h4 {
+    color: #e0e0e0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  
+  .masters-recommendations ul {
+    margin: 0;
+    padding-left: 20px;
+    color: #ccc;
+  }
+  
+  .masters-recommendations li {
+    margin-bottom: 5px;
+  }
+  
+  .no-career-paths {
+    padding: 30px 20px;
+    text-align: center;
+    color: #888;
+    font-style: italic;
+  }

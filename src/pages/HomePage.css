@@ -1,0 +1,348 @@
+:root {
+    --primary-green: #00a86b; /* Aesthetic green */
+    --dark-bg: #121212;
+    --darker-bg: #0a0a0a;
+    --card-bg: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --accent-blue: #3a86ff;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+  }
+  
+  .dashboard {
+    min-height: 100vh;
+    background-color: var(--darker-bg);
+    background-image: radial-gradient(circle at 50% 100%, rgba(0, 168, 107, 0.15) 0%, rgba(10, 10, 10, 0) 70%);
+  }
+  
+  /* Navbar Styles */
+  .main-nav {
+    padding: 1rem 2rem;
+    background-color: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    margin: 1rem;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .nav-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 700;
+    gap: 0.5rem;
+  }
+  
+  .brand-icon {
+    background-color: var(--primary-green);
+    color: var(--darker-bg);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }
+  
+  .brand-name {
+    font-size: 1.2rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--text-primary);
+  }
+  
+  .login-btn {
+    background-color: var(--accent-blue);
+    color: var(--text-primary);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #2a75e8;
+    transform: translateY(-2px);
+  }
+  
+  /* Hero Section Styles */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 1rem;
+    position: relative;
+  }
+  
+  .member-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    margin-bottom: 2.5rem;
+  }
+  
+  .member-count {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1.5rem;
+    max-width: 800px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 0 2.5rem;
+    line-height: 1.6;
+  }
+  
+  .cta-button {
+    background-color: var(--primary-green);
+    color: var(--text-primary);
+    padding: 0.75rem 1.75rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #009259;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 168, 107, 0.3);
+  }
+  
+  .arrow-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  
+/* Add to your existing CSS */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-toggle:hover {
+  background-color: #3e3e3e;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #1e1e1e;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  /* Critical fix: Add padding to create larger clickable area */
+  padding: 8px 0;
+}
+
+/* Display dropdown on hover with sufficient delay */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  /* Critical fix: Add animation with delay to prevent immediate disappearance */
+  animation: fadeIn 0.2s ease;
+}
+
+/* Ensure dropdown stays visible when moving to menu items */
+.dropdown-menu:hover {
+  display: block;
+}
+
+.dropdown-item {
+  color: #e0e0e0;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #3e3e3e;
+}
+
+.highlight-link {
+  border-left: 3px solid #4CAF50;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+  
+  .hero-glow {
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: radial-gradient(ellipse at center, rgba(0, 168, 107, 0.2) 0%, rgba(10, 10, 10, 0) 70%);
+    z-index: -1;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .home-page-container {
+    min-height: 100vh;
+    position: relative;
+    background-image: url('../assets/background.webp'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .home-page-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 1;
+  }
+  
+  
+  .dashboard {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    background-color: transparent;
+    background-image: none; 
+  }
+
+  /* Typewriter effect */
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    letter-spacing: 0.001em;
+    animation: typing 3.5s steps(40, end);
+    border-right: 0.15em solid var(--primary-green); /* The cursor */
+    animation-fill-mode: forwards;
+  }
+  
+  .typewriter-text.delayed {
+    animation-delay: 3.5s; /* Start after the first line finishes */
+    opacity: 0; /* Start invisible */
+    width: 0; /* Start with 0 width */
+    animation: typing 3.5s steps(40, end) 3.5s forwards;
+  }
+  
+  @keyframes typing {
+    from { 
+      width: 0;
+      opacity: 1;
+    }
+    to { 
+      width: 100%;
+      opacity: 1;
+      border-right-color: transparent; /* Hide cursor at the end */
+    }
+  }
+  
+  /* Optional: Add a blinking cursor effect */
+  .typewriter-text::after {
+    content: '';
+    position: absolute;
+    right: -0.15em;
+    height: 1em;
+    border-right: 0.15em solid var(--primary-green);
+    animation: blink-cursor 0.75s step-end infinite;
+  }
+  
+  .typewriter-text.delayed::after {
+    animation-delay: 3.5s; /* Match the delay of the text */
+    opacity: 0;
+    animation: blink-cursor 0.75s step-end infinite 3.5s;
+  }
+  
+  @keyframes blink-cursor {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-green) }
+  }
+
+ 
